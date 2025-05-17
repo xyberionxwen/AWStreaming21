@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWStream - Nonton Film</title>
+  <link rel="stylesheet" href="asset/css/style.css">
+  <style>
+      .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background: #000;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+   
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">AWStream</a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="#movies">Film</a></li>
+        <li><a href="#series">Serial TV</a></li>
+        <li><a href="#genres">Genre</a></li>
+      </ul>
+  
+      <div class="search-box">
+        <form onsubmit="searchMovie(event)">
+          <input type="text" id="searchInput" placeholder="Cari film...">
+          <button type="submit">Cari</button>
+        </form>
+      </div>
+    </nav>
+</header>
+
+  <div class="container">
+    <div class="video-container">
+      <!-- Pemutar Video HTML5 -->
+      <video controls autoplay poster="asset/image/25481.jpg">
+        <source src="asset/image/25481.jpg" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutar video HTML5.
+      </video>
+    </div>
+
+    <div class="movie-title">""</div>
+    <div class="movie-description">
+      Setelah kekalahan besar dalam Infinity War, para Avengers yang tersisa bersatu untuk membalikkan semua yang telah terjadi. Saksikan aksi dan drama dalam bab terakhir dari kisah epik ini hanya di AWStream.
+    </div>
+
+    <a href="index.html" class="back-button">← Kembali ke Beranda</a>
+  </div>
+<script>
+
+function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("show");
+}
+
+let lastScrollTop = 0;
+  const navbar = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll ke bawah -> sembunyikan navbar
+      navbar.classList.add("hide-navbar");
+    } else {
+      // Scroll ke atas -> tampilkan navbar
+      navbar.classList.remove("hide-navbar");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+  });
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const title = urlParams.get('title');
+const year = urlParams.get('year');
+const genre = urlParams.get('genre');
+const desc = urlParams.get('desc');
+const thumb = urlParams.get('thumb');
+const video = urlParams.get('video');
+
+// Tampilkan data di halaman player
+document.querySelector(".movie-title").textContent = title;
+document.querySelector(".movie-meta").textContent = `${year} | ${genre}`;
+document.querySelector(".movie-description").textContent = desc;
+
+const videoElement = document.querySelector("video");
+videoElement.poster = thumb;
+videoElement.querySelector("source").src = video;
+videoElement.load();
+
+</script>
+</body>
+</html>

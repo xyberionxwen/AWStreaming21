@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AWStream - Situs streaming film & serial TV terbaru Indonesia kualitas HD tanpa buffering.">
+    <link rel="icon" href="asset/image/favicon.png">
+    <title>AWStream - Situs Streaming Film</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+
+</head>
+<body>
+    <!-- Header dengan navigasi -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AWStream</a>
+        
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="#movies">Film</a></li>
+              <li><a href="#series">Serial TV</a></li>
+              <li><a href="#genres">Genre</a></li>
+            </ul>
+        
+            <div class="search-box">
+              <form onsubmit="searchMovie(event)">
+                <input type="text" id="searchInput" placeholder="Cari film...">
+                <button type="submit">Cari</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Streaming Film & Serial TV Terbaru</h1>
+            <p>Tonton film dan serial TV terbaru dengan kualitas HD tanpa buffering, kapanpun dan dimanapun.</p>
+            <a href="#trending" class="hero-btn">Jelajahi Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Trending Movies -->
+        <section id="trending" class="container">
+            <h2 class="section-title">Trending Minggu Ini</h2>
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/cocote.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Cocote Tonggo</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Drama, Komedi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 2 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/dendam.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Dendam Malam Kelam</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Horor, Kriminal </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 3 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/gundik.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Gundik</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Aksi, Horor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 4 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/perlu waktu.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mungkin Kita Perlu Waktu</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Drama Keluarga</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 5 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/sayapsayap.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Sayap-sayap Patah 2: Olivia</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Aksi, Drama Keluarga</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 6 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/tabayyun.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Tabayyun</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>religi, Drama Keluarga</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 6 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/tahzan.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">La Tahzan: Cinta, Dosa, Luka…</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>romantis, religi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 7 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/alto.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">The Alto Knights</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>biografi, kriminal, drama, sejarah</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 8 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/pabrikgula.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Pabrik Gula</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>misteri, horor</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 9 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/desamati.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Desa Mati The Movie</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>horor, thriller</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 10 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/bukanjodoh.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Bukan Jodoh Biasa Nih</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>komedi, romantis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Movie Card 11 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/jabangmayit.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Jabang Mayit </h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Horor</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 12 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/setanbotak.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Setan Botak di Jembatan Ancol</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>horor, komedi</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 13 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/siulankemataian.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Singsot: Siulan Kematian</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>horor, misteri</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 14 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/rumahdarah.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Misteri Rumah Darah</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Horor</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 15 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/komang.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Komang</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>drama, romantis</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 16 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/arwahsinden.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Arwah Sinden</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>horor, misteri</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 17 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/mickey.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Mickey 17</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>petualangan, komedi, fantasi, Sci-Fi</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 18 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/lostland.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">In the Lost Lands</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>aksi, petualangan, fantasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 19 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/black.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Black Bag</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Thriller, Drama</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 20 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/novocaine.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Novocaine</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>aksi, petualangan, fantasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 21 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/qodrat2.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Qodrat 2</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>misteri, horor</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 22 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/jumbo.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Jumbo</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>drama, romantis</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Movie Card 23 -->
+                 <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/rule.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Rule Breakers</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Drama</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 24 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/snow.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Snow White</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Thriller, Drama</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Movies -->
+        <section id="latest" class="container">
+            <h2 class="section-title">Film Terbaru</h2>
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    
+                    <img src="asset/image/komang.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Komang</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>drama, romantis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 2 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/dendam.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Dendam Malam Kelam</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Horor, Kriminal </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 3 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/rumahdarah.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Misteri Rumah Darah</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>Horor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 4 -->
+                <div class="movie-card" onclick="openMovie(this)" data-title="Desa Mati The Movie"
+                data-year="2025"
+                data-genre="horor, thriller"
+                data-desc="Sebuah cerita misteri penuh dendam dan kegelapan."
+                data-thumb="asset/image/desamati.jpeg"
+                data-video="video/desamati.mp4">>
+                    <img src="asset/image/desamati.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Desa Mati The Movie</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>horor, thriller</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 5 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/tahzan.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">La Tahzan: Cinta, Dosa, Luka…</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>romantis, religi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Movie Card 6 -->
+                <div class="movie-card" onclick="openMovie(this)">
+                    <img src="asset/image/tabayyun.jpeg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3 class="movie-title">Tabayyun</h3>
+                        <div class="movie-meta">
+                            <span>2025</span>
+                            <span>religi, Drama Keluarga</span>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Tentang Kami</a>
+                <a href="#">Syarat dan Ketentuan</a>
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Hubungi Kami</a>
+            </div>
+            <p class="copyright">© 2025 AWStream. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("show");
+}
+
+let lastScrollTop = 0;
+  const navbar = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scroll ke bawah -> sembunyikan navbar
+      navbar.classList.add("hide-navbar");
+    } else {
+      // Scroll ke atas -> tampilkan navbar
+      navbar.classList.remove("hide-navbar");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Menghindari nilai negatif
+  });
+
+function openMovie(element) {
+  const title = element.dataset.title;
+  const year = element.dataset.year;
+  const genre = element.dataset.genre;
+  const desc = element.dataset.desc;
+  const thumb = element.dataset.thumb;
+  const video = element.dataset.video;
+
+  const url = `player.html?title=${encodeURIComponent(title)}&year=${encodeURIComponent(year)}&genre=${encodeURIComponent(genre)}&desc=${encodeURIComponent(desc)}&thumb=${encodeURIComponent(thumb)}&video=${encodeURIComponent(video)}`;
+  
+  window.location.href = url;
+}
+
+function searchMovie(event) {
+    event.preventDefault();
+    const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+
+    const movieCards = document.querySelectorAll('.movie-card');
+
+    movieCards.forEach(card => {
+      const title = card.querySelector('.movie-title').textContent.toLowerCase();
+      if (title.includes(keyword)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+    </script>
+</body>
+</html>
